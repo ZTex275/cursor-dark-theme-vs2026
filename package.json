@@ -10,6 +10,7 @@
     },
     "icon": "images/icon.png",
     "readme": "README.md",
+    "license": "MIT",
     "homepage": "https://github.com/ZTex275/cursor-dark-theme-vs2026#readme",
     
     "engines": {
