@@ -1,0 +1,59 @@
+{
+    "name": "dark-theme-vs2026",
+    "displayName": "Dark Theme VS2026",
+    "description": "Dark theme inspired by Visual Studio 2026.",
+    "version": "0.0.16",
+    "publisher": "ZTex275",
+    "author": {
+        "name": "ZTex275",
+        "email": "airflow275@gmail.com"
+    },
+    "icon": "images/icon.png",
+    "readme": "README.md",
+    "homepage": "https://github.com/ZTex275/cursor-dark-theme-vs2026#readme",
+    
+    "engines": {
+      "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ZTex275/cursor-dark-theme-vs2026.git"
+    },
+
+    "contributes": {
+      "themes": [
+        {
+            "label": "Visual Studio 2026 Dark",
+            "uiTheme": "vs-dark",
+            "path": "./themes/dark-color-theme.json"
+        }
+      ]
+    },
+    "keywords": [
+        "vs",
+        "2026",
+        "vs2026",
+        "visual",
+        "studio",
+        "vs 2026",
+        "vs dark",
+        "2026 dark",
+        "vs2026 dark",
+        "visual 2026",
+        "studio 2026",
+        "vs 2026 dark",
+        "vs 2026 dark",
+        "visual studio",
+        "visual studio 2026",
+        "visual studio themes",
+        "visual studio color theme",
+        "visual studio 2026 themes",
+        "visual studio default themes",
+        "visual studio 2026 color theme",
+        "visual studio 2026 default themes"
+    ]
+}
