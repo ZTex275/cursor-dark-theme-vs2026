@@ -1,0 +1,104 @@
+{
+    "name": "XAML",
+    "scopeName": "text.xaml",
+    "patterns": [
+        { "include": "text.xml" }
+    ],
+    "injections": {
+        "string.quoted.single.xml, string.quoted.double.xml": {
+            "patterns": [
+                { "include": "#markupExtension" }
+            ]
+        }
+    },
+    "repository": {
+        "markupExtensionType": {
+            "patterns": [
+                {
+                    "match": "(?<={)(?:\\s*(([-\\w\\.]+)((:)))?([-\\w\\.]+))",
+                    "captures": {
+                        "2": { "name": "markupextension.type.namespace.xaml" },
+                        "3": { "name": "markupextension.type.xaml" },
+                        "4": { "name": "punctuation.separator.namespace.xaml" },
+                        "5": { "name": "markupextension.type.localname.xaml" }
+                    }
+                }
+            ]
+        },
+        "markupExtensionProperty": {
+            "patterns": [
+                {
+                    "match": "(?:^|[\\s,])(?:([-\\w.]+)((:)))?([-\\w.:]+)\\s*=",
+                    "captures": {
+                        "1": { "name": "markupextension.property.namespace.xaml" },
+                        "2": { "name": "markupextension.property.xaml" },
+                        "3": { "name": "punctuation.separator.namespace.xaml" },
+                        "4": { "name": "markupextension.property.localname.xaml" }
+                    }
+                }
+            ]
+        },
+        "markupExtensionValue": {
+            "patterns": [
+                {
+                    "match": "(?<==\\s*)(?!\\{)(?:([-\\w.]+)((:)))?([-\\w.:]+)",
+                    "captures": {
+                        "1": { "name": "markupextension.value.namespace.xaml" },
+                        "2": { "name": "markupextension.value.xaml" },
+                        "3": { "name": "punctuation.separator.namespace.xaml" },
+                        "4": { "name": "markupextension.value.localname.xaml" }
+                    }
+                },
+                {
+                    "match": "(?<=\\s)(?!\\{)(?:([-\\w.]+)((:)))?([-\\w.:]+)(?=[,}])",
+                    "captures": {
+                        "1": { "name": "markupextension.value.namespace.xaml" },
+                        "2": { "name": "markupextension.value.xaml" },
+                        "3": { "name": "punctuation.separator.namespace.xaml" },
+                        "4": { "name": "markupextension.value.localname.xaml" }
+                    }
+                }
+            ]
+        },
+        "markupExtensionBody": {
+            "patterns": [
+                { "include": "#markupExtensionType" },
+                { "include": "#markupExtensionProperty" },
+                { "include": "#markupExtensionValue" },
+                { "include": "#nestedMarkupExtension" },
+                {
+                    "match": "[,=]",
+                    "name": "punctuation.separator.markupextension.xaml"
+                }
+            ]
+        },
+        "markupExtension": {
+            "name": "markupextension.xaml",
+            "begin": "(?<=['\"])({)(?=(?:\\s*(([-\\w\\.]+)((:)))?([-\\w\\.]+)))",
+            "end": "(})?\\s*(?=['\"])",
+            "beginCaptures": {
+                "1": { "name": "punctuation.definition.tag.xaml" }
+            },
+            "endCaptures": {
+                "1": { "name": "punctuation.definition.tag.xaml" }
+            },
+            "patterns": [
+                { "include": "#markupExtensionBody" }
+            ]
+        },
+        "nestedMarkupExtension": {
+            "name": "nested.markupextension.xaml",
+            "begin": "({)",
+            "end": "(})\\s*(?=[,}])|(})?\\s*(?=['\"])",
+            "beginCaptures": {
+                "1": { "name": "punctuation.definition.tag.xaml" }
+            },
+            "endCaptures": {
+                "1": { "name": "punctuation.definition.tag.xaml" }
+            },
+            "patterns": [
+                { "include": "#markupExtensionBody" }
+            ]
+        }
+    }
+}

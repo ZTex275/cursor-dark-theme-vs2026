@@ -17,7 +17,8 @@
       "vscode": "^1.85.0"
     },
     "categories": [
-        "Themes"
+        "Themes",
+        "Programming Languages"
     ],
 
     "repository": {
@@ -26,6 +27,21 @@
     },
 
     "contributes": {
+      "languages": [
+        {
+          "id": "xaml",
+          "extensions": [".xaml"],
+          "aliases": ["XAML", "xaml"],
+          "configuration": "./language-configuration.json"
+        }
+      ],
+      "grammars": [
+        {
+          "language": "xaml",
+          "scopeName": "text.xaml",
+          "path": "./syntaxes/xaml.tmLanguage.json"
+        }
+      ],
       "themes": [
         {
             "label": "Visual Studio 2026 Dark",

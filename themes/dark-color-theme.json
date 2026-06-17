@@ -8,10 +8,11 @@
         "namespace":     { "foreground": "#C8C8C8FF" },
 
         "type":          { "foreground": "#4EC9B0FF" },
-        "typeParameter": { "foreground": "#4EC9B0FF" },
+        "typeParameter": { "foreground": "#B8D7A3FF" },
 
         "class":         { "foreground": "#4EC9B0FF" },
         "class.decorator":{ "foreground": "#BBB529FF" },
+        "record":        { "foreground": "#4EC9B0FF" },
 
         "interface":     { "foreground": "#B8D7A3FF" },
 
@@ -23,13 +24,14 @@
         "variable":      { "foreground": "#9CDCFEFF" },
         "variable.global":{ "foreground": "#C8C8C8FF" },
 
-        "property":      { "foreground": "#DADADAFF" },
+        "property":      { "foreground": "#DCDCDCFF" },
 
-        "parameter":     { "foreground": "#9A9A9AFF" },
+        "parameter":     { "foreground": "#9CDCFEFF" },
 
         "function":      { "foreground": "#DCDCAAFF" },
 
         "method":        { "foreground": "#DCDCAAFF" },
+        "method.declaration": { "foreground": "#DCDCAAFF" },
 
         "event":         { "foreground": "#DCDCDCFF" },
 
@@ -135,7 +137,7 @@
             "scope": [
                 "variable.parameter"
             ],
-            "settings": { "foreground": "#9A9A9AFF" }
+            "settings": { "foreground": "#9CDCFEFF" }
         },
         {
             "scope": [
@@ -327,6 +329,144 @@
                 "punctuation.definition.parameters.end.cpp"
             ],
             "settings": { "foreground": "#B4B4B4FF" }
+        },
+
+        // C#
+
+        {
+            "scope": "source.cs",
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": [
+                "keyword.control.cs",
+                "keyword.control.flow.cs"
+            ],
+            "settings": { "foreground": "#D8A0DFFF" }
+        },
+        {
+            "scope": [
+                "keyword.other.cs",
+                "keyword.operator.cs"
+            ],
+            "settings": { "foreground": "#569CD6FF" }
+        },
+        {
+            "scope": [
+                "storage.type.cs",
+                "storage.modifier.cs"
+            ],
+            "settings": { "foreground": "#569CD6FF" }
+        },
+        {
+            "scope": [
+                "entity.name.type.class.cs",
+                "entity.name.type.record.cs"
+            ],
+            "settings": { "foreground": "#4EC9B0FF" }
+        },
+        {
+            "scope": "entity.name.type.interface.cs",
+            "settings": { "foreground": "#B8D7A3FF" }
+        },
+        {
+            "scope": "entity.name.type.enum.cs",
+            "settings": { "foreground": "#B8D7A3FF" }
+        },
+        {
+            "scope": "entity.name.type.struct.cs",
+            "settings": { "foreground": "#86C691FF" }
+        },
+        {
+            "scope": "entity.name.type.delegate.cs",
+            "settings": { "foreground": "#4EC9B0FF" }
+        },
+        {
+            "scope": "entity.name.type.type-parameter.cs",
+            "settings": { "foreground": "#B8D7A3FF" }
+        },
+        {
+            "scope": "entity.name.type.namespace.cs",
+            "settings": { "foreground": "#C8C8C8FF" }
+        },
+        {
+            "scope": [
+                "entity.name.function.cs",
+                "entity.name.function.member.cs"
+            ],
+            "settings": { "foreground": "#DCDCAAFF" }
+        },
+        {
+            "scope": [
+                "variable.other.readwrite.cs",
+                "variable.other.object.cs",
+                "entity.name.variable.local.cs"
+            ],
+            "settings": { "foreground": "#9CDCFEFF" }
+        },
+        {
+            "scope": [
+                "variable.other.constant.cs",
+                "entity.name.variable.field.cs"
+            ],
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": "variable.parameter.cs",
+            "settings": { "foreground": "#9CDCFEFF" }
+        },
+        {
+            "scope": [
+                "string.quoted.double.cs",
+                "string.quoted.triple.cs",
+                "string.quoted.interpolated.cs"
+            ],
+            "settings": { "foreground": "#D69D85FF" }
+        },
+        {
+            "scope": "constant.numeric.cs",
+            "settings": { "foreground": "#B5CEA8FF" }
+        },
+        {
+            "scope": [
+                "comment.block.cs",
+                "comment.line.cs"
+            ],
+            "settings": { "foreground": "#57A64AFF" }
+        },
+        {
+            "scope": [
+                "comment.block.documentation.cs",
+                "comment.block.documentation.cs punctuation.definition.tag.cs"
+            ],
+            "settings": { "foreground": "#608B4EFF" }
+        },
+        {
+            "scope": [
+                "comment.block.documentation.cs entity.name.tag.cs",
+                "comment.block.documentation.cs entity.other.attribute-name.cs"
+            ],
+            "settings": { "foreground": "#608B4EFF" }
+        },
+        {
+            "scope": "comment.block.documentation.cs string.quoted.double.cs",
+            "settings": { "foreground": "#C8C8C8FF" }
+        },
+        {
+            "scope": [
+                "meta.preprocessor.cs",
+                "punctuation.definition.directive.cs",
+                "keyword.other.preprocessor.cs"
+            ],
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": "meta.interpolation.cs",
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": "punctuation.section.embedded.begin.cs",
+            "settings": { "foreground": "#89BB82FF" }
         },
 
         // Go
@@ -574,19 +714,17 @@
             "settings": { "foreground": "#C8C8C8FF" }
         },
         {
-            "scope": "entity.name.tag.xml",
+            "scope": [
+                "entity.name.tag.xml",
+                "entity.name.tag.localname.xml"
+            ],
             "settings": { "foreground": "#569CD6FF" }
         },
         {
-            "scope": "entity.other.attribute-name.xml",
-            "settings": { "foreground": "#92CAF4FF" }
-        },
-        {
-            "scope": "entity.name.tag.localname.xml",
-            "settings": { "foreground": "#569CD6FF" }
-        },
-        {
-            "scope": "entity.other.attribute-name.localname.xml",
+            "scope": [
+                "entity.other.attribute-name.xml",
+                "entity.other.attribute-name.localname.xml"
+            ],
             "settings": { "foreground": "#92CAF4FF" }
         },
         {
@@ -595,9 +733,124 @@
         },
         {
             "scope": [
-                "punctuation.definition.tag.xml"
+                "string.quoted.double.xml",
+                "string.quoted.single.xml"
             ],
-            "settings": { "foreground": "#808080FF" }
+            "settings": { "foreground": "#C8C8C8FF" }
+        },
+        {
+            "scope": [
+                "comment.block.xml",
+                "comment.block.documentation.xml"
+            ],
+            "settings": { "foreground": "#608B4EFF" }
+        },
+        {
+            "scope": [
+                "punctuation.definition.tag.xml",
+                "punctuation.definition.tag.begin.xml",
+                "punctuation.definition.tag.end.xml"
+            ],
+            "settings": { "foreground": "#89BB82FF" }
+        },
+        {
+            "scope": "entity.name.tag.namespace.xml",
+            "settings": { "foreground": "#569CD6FF" }
+        },
+
+        // XAML (Visual Studio 2026 Dark)
+
+        {
+            "scope": "text.xaml",
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": [
+                "text.xaml entity.name.tag.xml",
+                "text.xaml entity.name.tag.localname.xml",
+                "text.xaml entity.name.tag.namespace.xml",
+                "text.xaml meta.tag.xml"
+            ],
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": [
+                "text.xaml entity.other.attribute-name.xml",
+                "text.xaml entity.other.attribute-name.localname.xml",
+                "text.xaml entity.other.attribute-name.namespace.xml"
+            ],
+            "settings": { "foreground": "#9CDCFEFF" }
+        },
+        {
+            "scope": [
+                "text.xaml string.quoted.double.xml",
+                "text.xaml string.quoted.single.xml"
+            ],
+            "settings": { "foreground": "#569CD6FF" }
+        },
+        {
+            "scope": [
+                "text.xaml markupextension.xaml",
+                "text.xaml nested.markupextension.xaml"
+            ],
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": [
+                "text.xaml markupextension.type.xaml",
+                "text.xaml markupextension.type.localname.xaml",
+                "text.xaml markupextension.type.namespace.xaml",
+                "text.xaml markupextension.xaml entity.name.tag.xaml",
+                "text.xaml markupextension.xaml entity.name.tag.localname.xaml",
+                "text.xaml markupextension.xaml entity.name.tag.namespace.xaml",
+                "text.xaml nested.markupextension.xaml entity.name.tag.xaml",
+                "text.xaml nested.markupextension.xaml entity.name.tag.localname.xaml"
+            ],
+            "settings": { "foreground": "#D69D85FF" }
+        },
+        {
+            "scope": [
+                "text.xaml markupextension.property.xaml",
+                "text.xaml markupextension.property.localname.xaml",
+                "text.xaml markupextension.property.namespace.xaml",
+                "text.xaml markupextension.xaml entity.other.attribute-name.xml",
+                "text.xaml markupextension.xaml entity.other.attribute-name.localname.xml",
+                "text.xaml markupextension.xaml entity.other.attribute-name.namespace.xml",
+                "text.xaml nested.markupextension.xaml entity.other.attribute-name.xml",
+                "text.xaml nested.markupextension.xaml entity.other.attribute-name.localname.xml"
+            ],
+            "settings": { "foreground": "#9CDCFEFF" }
+        },
+        {
+            "scope": [
+                "text.xaml markupextension.value.xaml",
+                "text.xaml markupextension.value.localname.xaml",
+                "text.xaml markupextension.value.namespace.xaml"
+            ],
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": [
+                "text.xaml punctuation.separator.markupextension.xaml"
+            ],
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": [
+                "text.xaml punctuation.definition.tag.xml",
+                "text.xaml punctuation.definition.tag.begin.xml",
+                "text.xaml punctuation.definition.tag.end.xml",
+                "text.xaml punctuation.definition.tag.xaml",
+                "text.xaml punctuation.separator.namespace.xaml"
+            ],
+            "settings": { "foreground": "#DCDCDCFF" }
+        },
+        {
+            "scope": [
+                "text.xaml comment.block.xml",
+                "text.xaml comment.block.documentation.xml"
+            ],
+            "settings": { "foreground": "#608B4EFF" }
         },
 
         // Json
