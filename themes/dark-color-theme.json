@@ -822,6 +822,13 @@
         },
         {
             "scope": [
+                "text.xaml constant.other.markupextension.value.xaml",
+                "text.xaml variable.other.markupextension.member.xaml"
+            ],
+            "settings": { "foreground": "#AEAEADFF" }
+        },
+        {
+            "scope": [
                 "text.xaml comment.block.xml",
                 "text.xaml comment.block.documentation.xml"
             ],
