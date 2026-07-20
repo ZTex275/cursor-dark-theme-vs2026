@@ -1,0 +1,47 @@
+{
+    "name": "XAML Markup Extensions",
+    "scopeName": "xaml.markup",
+    "injectionSelector": "L:string.quoted.double.xml, L:string.quoted.single.xml",
+    "patterns": [
+        { "include": "#markupExtension" }
+    ],
+    "repository": {
+        "markupExtension": {
+            "name": "meta.markupextension.xaml",
+            "begin": "(\\{)",
+            "end": "(\\})",
+            "beginCaptures": {
+                "1": { "name": "punctuation.definition.markupextension.xaml" }
+            },
+            "endCaptures": {
+                "1": { "name": "punctuation.definition.markupextension.xaml" }
+            },
+            "patterns": [
+                { "include": "#markupExtension" },
+                {
+                    "match": "(?<=\\{)\\s*([A-Za-z_][\\w.]*(?::[A-Za-z_][\\w.]*)?)",
+                    "captures": {
+                        "1": { "name": "keyword.markupextension.type.xaml" }
+                    }
+                },
+                {
+                    "match": "([A-Za-z_][\\w.]*)\\s*(=)",
+                    "captures": {
+                        "1": { "name": "entity.other.attribute-name.markupextension.xaml" },
+                        "2": { "name": "punctuation.separator.key-value.markupextension.xaml" }
+                    }
+                },
+                {
+                    "match": "(?<=[=\\s,])([A-Za-z_][\\w.]*(?::[A-Za-z_][\\w.]*)?)(?=[\\s,}])",
+                    "captures": {
+                        "1": { "name": "variable.other.markupextension.value.xaml" }
+                    }
+                },
+                {
+                    "match": ",",
+                    "name": "punctuation.separator.markupextension.xaml"
+                }
+            ]
+        }
+    }
+}

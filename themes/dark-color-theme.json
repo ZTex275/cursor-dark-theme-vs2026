@@ -759,7 +759,7 @@
         },
 
         // XAML (Visual Studio 2026 Dark)
-
+        
         {
             "scope": "text.xaml",
             "settings": { "foreground": "#DCDCDCFF" }
@@ -784,66 +784,41 @@
         {
             "scope": [
                 "text.xaml string.quoted.double.xml",
-                "text.xaml string.quoted.single.xml"
+                "text.xaml string.quoted.single.xml",
+                "text.xaml punctuation.definition.string.begin.xml",
+                "text.xaml punctuation.definition.string.end.xml",
+                "text.xaml string.quoted.double.xml punctuation.definition.string.begin.xml",
+                "text.xaml string.quoted.double.xml punctuation.definition.string.end.xml",
+                "text.xaml string.quoted.single.xml punctuation.definition.string.begin.xml",
+                "text.xaml string.quoted.single.xml punctuation.definition.string.end.xml"
             ],
             "settings": { "foreground": "#569CD6FF" }
-        },
-        {
-            "scope": [
-                "text.xaml markupextension.xaml",
-                "text.xaml nested.markupextension.xaml"
-            ],
-            "settings": { "foreground": "#DCDCDCFF" }
-        },
-        {
-            "scope": [
-                "text.xaml markupextension.type.xaml",
-                "text.xaml markupextension.type.localname.xaml",
-                "text.xaml markupextension.type.namespace.xaml",
-                "text.xaml markupextension.xaml entity.name.tag.xaml",
-                "text.xaml markupextension.xaml entity.name.tag.localname.xaml",
-                "text.xaml markupextension.xaml entity.name.tag.namespace.xaml",
-                "text.xaml nested.markupextension.xaml entity.name.tag.xaml",
-                "text.xaml nested.markupextension.xaml entity.name.tag.localname.xaml"
-            ],
-            "settings": { "foreground": "#D69D85FF" }
-        },
-        {
-            "scope": [
-                "text.xaml markupextension.property.xaml",
-                "text.xaml markupextension.property.localname.xaml",
-                "text.xaml markupextension.property.namespace.xaml",
-                "text.xaml markupextension.xaml entity.other.attribute-name.xml",
-                "text.xaml markupextension.xaml entity.other.attribute-name.localname.xml",
-                "text.xaml markupextension.xaml entity.other.attribute-name.namespace.xml",
-                "text.xaml nested.markupextension.xaml entity.other.attribute-name.xml",
-                "text.xaml nested.markupextension.xaml entity.other.attribute-name.localname.xml"
-            ],
-            "settings": { "foreground": "#9CDCFEFF" }
-        },
-        {
-            "scope": [
-                "text.xaml markupextension.value.xaml",
-                "text.xaml markupextension.value.localname.xaml",
-                "text.xaml markupextension.value.namespace.xaml"
-            ],
-            "settings": { "foreground": "#DCDCDCFF" }
-        },
-        {
-            "scope": [
-                "text.xaml punctuation.separator.markupextension.xaml"
-            ],
-            "settings": { "foreground": "#DCDCDCFF" }
         },
         {
             "scope": [
                 "text.xaml punctuation.definition.tag.xml",
                 "text.xaml punctuation.definition.tag.begin.xml",
                 "text.xaml punctuation.definition.tag.end.xml",
-                "text.xaml punctuation.definition.tag.xaml",
-                "text.xaml punctuation.separator.namespace.xaml"
+                "text.xaml punctuation.separator.namespace.xml"
             ],
-            "settings": { "foreground": "#DCDCDCFF" }
+            "settings": { "foreground": "#808080FF" }
+        },
+        {
+            "scope": [
+                "text.xaml keyword.markupextension.type.xaml",
+                "text.xaml punctuation.definition.markupextension.xaml"
+            ],
+            "settings": { "foreground": "#B89D89FF" }
+        },
+        {
+            "scope": [
+                "text.xaml meta.markupextension.xaml",
+                "text.xaml entity.other.attribute-name.markupextension.xaml",
+                "text.xaml variable.other.markupextension.value.xaml",
+                "text.xaml punctuation.separator.key-value.markupextension.xaml",
+                "text.xaml punctuation.separator.markupextension.xaml"
+            ],
+            "settings": { "foreground": "#C8B364FF" }
         },
         {
             "scope": [

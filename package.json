@@ -2,7 +2,7 @@
     "name": "dark-theme-vs2026",
     "displayName": "Dark Theme VS2026",
     "description": "Dark theme inspired by Visual Studio 2026.",
-    "version": "0.0.16",
+    "version": "0.0.22",
     "publisher": "ZTex275",
     "author": {
         "name": "ZTex275",
@@ -40,6 +40,13 @@
           "language": "xaml",
           "scopeName": "text.xaml",
           "path": "./syntaxes/xaml.tmLanguage.json"
+        },
+        {
+          "scopeName": "xaml.markup",
+          "path": "./syntaxes/xaml-markup.tmLanguage.json",
+          "injectTo": [
+            "text.xaml"
+          ]
         }
       ],
       "themes": [
