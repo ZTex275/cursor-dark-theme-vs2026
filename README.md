@@ -1,6 +1,6 @@
 # Dark Theme VS2026
 
-![Visual Studio 2026 Dark](images/icon.png)
+![Visual Studio 2026 Dark](images/icon-app.png)
 
 ---
 

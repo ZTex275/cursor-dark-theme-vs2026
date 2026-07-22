@@ -2,3 +2,5 @@
 .vscode/**
 **/*.vsix
 node_modules/**
+**/.git/**
+images/icon-source.png
