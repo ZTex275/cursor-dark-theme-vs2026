@@ -339,6 +339,32 @@
         },
         {
             "scope": [
+                "punctuation.parenthesis.open.cs",
+                "punctuation.parenthesis.close.cs",
+                "punctuation.curlybrace.open.cs",
+                "punctuation.curlybrace.close.cs",
+                "punctuation.squarebracket.open.cs",
+                "punctuation.squarebracket.close.cs",
+                "punctuation.definition.typeparameters.begin.cs",
+                "punctuation.definition.typeparameters.end.cs",
+                "punctuation.terminator.statement.cs",
+                "punctuation.separator.comma.cs",
+                "punctuation.separator.colon.cs",
+                "punctuation.separator.coloncolon.cs",
+                "punctuation.separator.question-mark.cs",
+                "punctuation.separator.equals.cs",
+                "punctuation.accessor.cs",
+                "punctuation.accessor.pointer.cs",
+                "punctuation.separator.asterisk.cs",
+                "punctuation.separator.at.cs",
+                "punctuation.separator.hash.cs",
+                "punctuation.dot.cs",
+                "punctuation.tilde.cs"
+            ],
+            "settings": { "foreground": "#FFFFFFFF" }
+        },
+        {
+            "scope": [
                 "keyword.control.cs",
                 "keyword.control.flow.cs"
             ],
